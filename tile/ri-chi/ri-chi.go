@@ -3,6 +3,7 @@ package ri_chi
 import (
 	"errors"
 	"fmt"
+	"go-SocketMahjong/tile"
 	"strconv"
 )
 
@@ -41,6 +42,18 @@ func (r *Richi)ReturnTilesIntArray()[]int  {
 	return TilesArray
 }
 
+func (r *Richi)ReturnTilesInterfaceArray()[]tile.Tile  {
+	var TilesArray []Richi
+	var t []tile.Tile
+	TilesArray = make([]Richi,AllTileNum)
+	for i:=0;i<AllTileNum;i++{
+		TilesArray[i].Flower = i+1
+		TilesArray[i].Num = i%4+1
+		t = append(t, TilesArray[i])
+	}
+	return t
+}
+
 func (r *Richi)ReturnTilesSelfArray()[]Richi  {
 	var TilesArray []Richi
 	TilesArray = make([]Richi,AllTileNum)
@@ -51,8 +64,12 @@ func (r *Richi)ReturnTilesSelfArray()[]Richi  {
 	return TilesArray
 }
 
-func (r *Richi)PrintCard()  {
+func (r Richi)PrintCard()  {
 	fmt.Printf("%d-%s\n",r.Num,Analyze(r.Flower))
+}
+
+func (r Richi)PrintCardOrigin()  {
+	fmt.Printf("%d-%s  ",r.Num,Analyze(r.Flower))
 }
 
 func Analyze(tileNum int)(chara string)  {
