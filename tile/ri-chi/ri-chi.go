@@ -33,6 +33,8 @@ type Richi struct {
 	Flower int
 }
 
+
+
 func (r *Richi)ReturnTilesIntArray()[]int  {
 	var TilesArray []int
 	TilesArray = make([]int,AllTileNum)
@@ -69,7 +71,16 @@ func (r Richi)PrintCard()  {
 }
 
 func (r Richi)PrintCardOrigin()  {
-	fmt.Printf("%d-%s  ",r.Num,Analyze(r.Flower))
+	//fmt.Printf("%d-%s  ",r.Num,Analyze(r.Flower))
+	fmt.Printf("%d-%s-%d  ",r.Num,Analyze(r.Flower),r.Flower)
+}
+
+func (r Richi)Number()int  {
+	return r.Flower
+}
+
+func (r Richi)RemainTiles()int  {
+	return 14
 }
 
 func Analyze(tileNum int)(chara string)  {

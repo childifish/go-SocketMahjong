@@ -20,11 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93a5a298-278e-4aa0-a285-544395b8847a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/table/newWall.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/table/newWall_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ground/ground.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/player/position.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tile/ri-chi/win.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/table/wall.go" beforeDir="false" afterPath="$PROJECT_DIR$/table/wall.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player/act.go" beforeDir="false" afterPath="$PROJECT_DIR$/player/act.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/table/newWall.go" beforeDir="false" afterPath="$PROJECT_DIR$/table/Wall.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/table/newWall_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/table/Wall_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/table/wall.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tile/ri-chi/ri-chi.go" beforeDir="false" afterPath="$PROJECT_DIR$/tile/ri-chi/ri-chi.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tile/tile.go" beforeDir="false" afterPath="$PROJECT_DIR$/tile/tile.go" afterDir="false" />
     </list>
@@ -57,14 +60,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SanguoKill" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ccc\go\src\SocketMahjong\tile\ri-chi" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build go-SocketMahjong/cmd">
+  <component name="RunManager" selected="Go 构建.go build go-SocketMahjong/cmd">
     <configuration name="go build go-SocketMahjong/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="SocketMahjong" />
       <working_directory value="$PROJECT_DIR$" />
@@ -120,11 +124,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build go-SocketMahjong/cmd" />
-        <item itemvalue="Go Test.TestWall_Init in go-SocketMahjong/table" />
-        <item itemvalue="Go Test.TestRichi1 in go-SocketMahjong/tile/ri-chi" />
-        <item itemvalue="Go Test.TestRichi1 in SocketMahjong/tile/ri-chi (1)" />
-        <item itemvalue="Go Test.TestRichi1 in SocketMahjong/tile/ri-chi" />
+        <item itemvalue="Go 构建.go build go-SocketMahjong/cmd" />
       </list>
     </recent_temporary>
   </component>
@@ -148,25 +148,33 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1805" height="384" key="GridCell.Tab.0.bottom" timestamp="1615100820774">
+    <state x="704" y="294" key="FileChooserDialogImpl" timestamp="1615615931314">
       <screen x="0" y="0" width="1848" height="1080" />
     </state>
-    <state width="1805" height="384" key="GridCell.Tab.0.bottom/0.0.1848.1080@0.0.1848.1080" timestamp="1615100820774" />
-    <state width="1805" height="384" key="GridCell.Tab.0.center" timestamp="1615100820774">
+    <state x="704" y="294" key="FileChooserDialogImpl/0.0.1848.1080@0.0.1848.1080" timestamp="1615615931314" />
+    <state width="1805" height="417" key="GridCell.Tab.0.bottom" timestamp="1615616199578">
       <screen x="0" y="0" width="1848" height="1080" />
     </state>
-    <state width="1805" height="384" key="GridCell.Tab.0.center/0.0.1848.1080@0.0.1848.1080" timestamp="1615100820774" />
-    <state width="1805" height="384" key="GridCell.Tab.0.left" timestamp="1615100820774">
+    <state width="1805" height="417" key="GridCell.Tab.0.bottom/0.0.1848.1080@0.0.1848.1080" timestamp="1615616199578" />
+    <state width="1805" height="417" key="GridCell.Tab.0.center" timestamp="1615616199577">
       <screen x="0" y="0" width="1848" height="1080" />
     </state>
-    <state width="1805" height="384" key="GridCell.Tab.0.left/0.0.1848.1080@0.0.1848.1080" timestamp="1615100820774" />
-    <state width="1805" height="384" key="GridCell.Tab.0.right" timestamp="1615100820774">
+    <state width="1805" height="417" key="GridCell.Tab.0.center/0.0.1848.1080@0.0.1848.1080" timestamp="1615616199577" />
+    <state width="1805" height="417" key="GridCell.Tab.0.left" timestamp="1615616199577">
       <screen x="0" y="0" width="1848" height="1080" />
     </state>
-    <state width="1805" height="384" key="GridCell.Tab.0.right/0.0.1848.1080@0.0.1848.1080" timestamp="1615100820774" />
-    <state x="700" y="327" key="com.goide.refactor.extractInterface.GoExtractInterfaceDialog" timestamp="1615099110590">
+    <state width="1805" height="417" key="GridCell.Tab.0.left/0.0.1848.1080@0.0.1848.1080" timestamp="1615616199577" />
+    <state width="1805" height="417" key="GridCell.Tab.0.right" timestamp="1615616199578">
       <screen x="0" y="0" width="1848" height="1080" />
     </state>
-    <state x="700" y="327" key="com.goide.refactor.extractInterface.GoExtractInterfaceDialog/0.0.1848.1080@0.0.1848.1080" timestamp="1615099110590" />
+    <state width="1805" height="417" key="GridCell.Tab.0.right/0.0.1848.1080@0.0.1848.1080" timestamp="1615616199578" />
+    <state x="425" y="184" key="SettingsEditor" timestamp="1615614517419">
+      <screen x="0" y="0" width="1848" height="1080" />
+    </state>
+    <state x="425" y="184" key="SettingsEditor/0.0.1848.1080@0.0.1848.1080" timestamp="1615614517419" />
+    <state x="700" y="327" key="com.goide.refactor.extractInterface.GoExtractInterfaceDialog" timestamp="1615614419623">
+      <screen x="0" y="0" width="1848" height="1080" />
+    </state>
+    <state x="700" y="327" key="com.goide.refactor.extractInterface.GoExtractInterfaceDialog/0.0.1848.1080@0.0.1848.1080" timestamp="1615614419623" />
   </component>
 </project>
